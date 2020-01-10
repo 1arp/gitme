@@ -14,7 +14,7 @@ app.use('/pages',require('./routes/pagesjs').route)
 
 
 
-app.use('/api',require('./routes/api'))
+app.use('/api',require('./routes/api').route)
 
 
 
