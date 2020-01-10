@@ -1,5 +1,5 @@
 var mainList = document.getElementById('mainList')
-
+var filtrBtn = document.getElementById('filterBtn')
 
 
 async function getRepos(){
@@ -16,12 +16,28 @@ function render(repos){
 
 }
 
+
+
+
+var repos = undefined;
+var languages = [];
 async function init(){
-    const repos = await getRepos();
+    repos = await getRepos();
     render(repos);
+    repos.map(element => languages.push(element.language))
+    languages = [... new Set(languages)]
+    console.log(languages);
 }
 
+
+
 init()
+
+filterBtn.onclick = function(){
+    var newrepo = repos.filter((element) => element.name == 'twitter_particle' ) 
+    console.log('#')
+    render(newrepo)
+}
 
 
 console.log(getRepos())
