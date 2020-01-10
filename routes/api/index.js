@@ -11,11 +11,13 @@ async function getRepos(username) {
     return repos;
 }
 
-
-
 route.get("/:id/repos", async (req, res) => {
     var repos = await getRepos(req.params.id);
     res.send(repos);
 });
+
+// route.get()
+
+
 
 module.exports = route;
