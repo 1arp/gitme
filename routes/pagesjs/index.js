@@ -1,9 +1,15 @@
-const express = require('express')
-const route = express.Router()
+const express = require('express');
+const route = express.Router();
 
 
-route.get('/',(req,res) => {
-    res.sendfile()
+
+
+const path =require('path');
+
+
+route.get('/repos',(req,res) => {
+    
+    res.sendFile(path.join(__dirname,'..','..','pages','repoview','index.html'))
 })
 
 

@@ -9,7 +9,16 @@ app.use(express.json());
 
 app.use('/',express.static(path.join(__dirname, "public")));
 
+app.use('/pages',require('./routes/pagesjs'))
+
+
+
+
 app.use('/api',require('./routes/api'))
 
 
+
+
 app.listen(PORT, () => console.log(`server started at ${PORT}`));
+
+
