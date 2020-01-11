@@ -22,6 +22,13 @@ route.get('/getrepos', async(req,res) => {
     res.send(repos);
 })
 
+route.get('/getavatar', async(req,res) =>{
+    const avatarUrl = await api.getAvatar(username);
+    console.log(avatarUrl);
+    res.send(avatarUrl);
+
+})
+
 
 
 module.exports = {

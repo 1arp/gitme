@@ -11,16 +11,23 @@ async function getRepos(username) {
     return repos;
 }
 
+async function getAvatar(username) {
+    var response = await axios.get(`https://api.github.com/users/${username}`)
+    var data = await response.data;
+    return data.avatar_url;
+}
+
+
 route.get("/:id/repos", async (req, res) => {
     var repos = await getRepos(req.params.id);
     res.send(repos);
 });
 
-// route.get()
 
 
 
 module.exports = {
     route,
-    getRepos
+    getRepos,
+    getAvatar
 };
