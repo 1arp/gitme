@@ -22,10 +22,9 @@ route.get('/getrepos', async(req,res) => {
     res.send(repos);
 })
 
-route.get('/getavatar', async(req,res) =>{
-    const avatarUrl = await api.getAvatar(username);
-    console.log(avatarUrl);
-    res.send(avatarUrl);
+route.get('/getprofile', async(req,res) =>{
+    const profile = await api.getProfile(username);
+    res.send(profile);
 
 })
 

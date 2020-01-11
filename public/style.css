@@ -1,3 +1,23 @@
-*{
+
+body{
+    background-color: #D4C2FC;
+    margin : 35vh 0 0;
+}
+
+
+#mainTitle{
     text-align: center;
+}
+
+#username { 
+    border-radius: 70px;
+    text-align: center;
+}
+
+#username::placeholder{
+    text-align: center;
+}
+
+#username:focus::placeholder{
+    color: white;
 }

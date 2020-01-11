@@ -14,10 +14,11 @@ async function getRepos(){
 }
 
 // Fetching Profile Picture
-async function getAvatar(){
-    const avatar = await fetch('/pages/getavatar');
-    const avatarUrl = await avatar.text();
-    return avatarUrl;
+async function getProfile(){
+    const profileResponse = await fetch('/pages/getprofile');
+    const profile = await profileResponse.json();
+
+    return profile;
     
 }
 
@@ -93,9 +94,12 @@ var repos = undefined;
 var languages = [];
 var forkcount = [];
 var maxforkcount = undefined;
+var profile = undefined;
 async function init(){
     
-    avatarImg.src = await getAvatar();
+    profile = await getProfile();
+
+    avatarImg.src = await profile.avatar_url;
 
     repos = await getRepos();
     render(repos);
@@ -118,10 +122,6 @@ async function init(){
     forkFltr.setAttribute('max',maxforkcount);
     console.log(languages);
     loadDropdown(langFltr,languages,fltrAll)
-
-
-
-    getAvatar();
 
 }
 
