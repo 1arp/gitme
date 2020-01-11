@@ -1,3 +1,11 @@
 *{
     text-align: center;
+    box-sizing: border-box;
+}
+
+#avatarImg {
+    height: 200px;
+    width: 200px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
 }

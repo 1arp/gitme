@@ -1,4 +1,6 @@
 var mainList = document.getElementById('mainList')
+var divavatar = document.getElementById('avatar')
+var avatarImg = document.getElementById('avatarImg')
 var filtrBtn = document.getElementById('filterBtn')
 var langFltr = document.getElementById('langFltr')
 var forkFltr = document.getElementById('forkFltr')
@@ -11,11 +13,11 @@ async function getRepos(){
     return repos;
 }
 
-
+// Fetching Profile Picture
 async function getAvatar(){
     const avatar = await fetch('/pages/getavatar');
     const avatarUrl = await avatar.text();
-    return 
+    return avatarUrl;
     
 }
 
@@ -92,8 +94,18 @@ var languages = [];
 var forkcount = [];
 var maxforkcount = undefined;
 async function init(){
+    
+    avatarImg.src = await getAvatar();
+
     repos = await getRepos();
     render(repos);
+
+    // var avatarimg = document.createElement('img');
+    // avatarimg.src = await getAvatar();
+    // divavatar.appendChild(avatarimg);
+
+    
+
     repos.map(element => {
         languages.push(element.language);
         forkcount.push(element.forks_count);
