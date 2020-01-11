@@ -1,5 +1,4 @@
 var mainList = document.getElementById('mainList')
-var divavatar = document.getElementById('avatar')
 var avatarImg = document.getElementById('avatarImg')
 var filtrBtn = document.getElementById('filterBtn')
 var langFltr = document.getElementById('langFltr')

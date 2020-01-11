@@ -24,10 +24,46 @@
 
 </head>
 <body>
-    <h1 class='display-2'>Repos</h1>
-    <div id="avatar">
+
+
+    <!-- NAVBAR -->
+    <nav id="mainNav">
+      <form class="form-inline row" action="/pages/repos" method="GET" id="gitsearch">
+        
+        <div class="col-2"></div>
+        <div class="col-1">
+          <label for="username" class="display-4" id="home"> Git Me</label>
+        </div>
+        
+            <input class="form-control col-5 " type="search" placeholder="username" id="username" name="username">
+            <button type="submit" class="btn  col-1" id="searchBtn">Go</button>
+        <div class="col-3"></div>
+      </form>
+      
+    </nav>
+
+
+
+    <!-- ENd NAVBAR -->
+    
+    <!-- Profile -->
+    <div id="profile" class="row">
+      <div class="col-1"></div>
+      <div class="col-1">  
         <img id="avatarImg">
+      </div>
+      <div class="col-2">
+        <h3 id="name" class="ml-5">joseph carlo</h3>
+        <div>
+          <h4 class="ml-5">1arp</h4>
+        </div>
+      </div>
+      <div class="col-8"></div>
+      
+
     </div>
+
+    <!-- Profile-->
 
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,7 +90,23 @@
 
     <button id="filterBtn">Filter</button>
 
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+      
 
+    
     <ul id="repoList">
 
     </ul>
