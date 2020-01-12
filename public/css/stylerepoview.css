@@ -11,9 +11,9 @@ form{
 #avatarImg {
     height: 150px;
     width: 150px;
-    background-color: cornflowerblue;
+    background-color: white;
     border-radius: 50%;
-    border: 10px double #79F8FC;
+    border: 7.5px double black;
 }
 
 #username { 
@@ -113,7 +113,8 @@ br{
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: black;
+    background: white;
+    border: 1px double black;
     cursor: pointer;
   }
 
