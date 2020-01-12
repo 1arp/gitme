@@ -1,8 +1,16 @@
 var mainList = document.getElementById('mainList')
+
 var avatarImg = document.getElementById('avatarImg')
-var filtrBtn = document.getElementById('filterBtn')
+var profileName = document.getElementById('profileName')
+var profileUsername = document.getElementById('profileUsername')
+
+
+var rangeOut = document.getElementById('rangeOut')
+
 var langFltr = document.getElementById('langFltr')
 var forkFltr = document.getElementById('forkFltr')
+
+
 
 
 //  Fecthing Repos
@@ -98,6 +106,9 @@ async function init(){
     
     profile = await getProfile();
 
+    profileName.innerText = profile.name;
+    profileUsername.innerText = profile.login;
+
     avatarImg.src = await profile.avatar_url;
 
     repos = await getRepos();
@@ -128,15 +139,14 @@ async function init(){
 
 init()
 
-filterBtn.onclick = function(){
-    var newrepo = repos.filter((element) => element.name == 'twitter_particle' ) 
-    console.log('#')
-    render(newrepo)
-}
+
 
 forkFltr.oninput = function(){
+    rangeOut.innerText = this.value
     fltrAll()
 }
+
+
 
 
 console.log(getRepos())

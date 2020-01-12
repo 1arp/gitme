@@ -46,7 +46,8 @@ nav{
 #mainNav{
     position: sticky;
     background-color: white;
-    top: 0px
+    top: 0px;
+    z-index: 999;
 }
 
 .temp{
@@ -60,6 +61,15 @@ br{
     font-size: 50%;
 }
 
-#name{
+#profileName{
     margin-top: 35px;
+}
+
+
+.profileText{
+    margin-left: 4vh;
+}
+
+#dropdownMenu {
+    border: 1px solid black;
 }

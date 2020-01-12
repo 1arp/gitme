@@ -17,7 +17,7 @@
 
 
     <!-- js -->
-    <script defer src="../js/scriptrepoview.js"></script>
+    <!-- <script defer src="../js/scriptrepoview.js"></script> -->
     
     
     <title>repoview</title>
@@ -53,9 +53,9 @@
         <img id="avatarImg">
       </div>
       <div class="col-2">
-        <h3 id="name" class="ml-5">joseph carlo</h3>
+        <h3 id="profileName" class="profileText">Name</h3>
         <div>
-          <h4 class="ml-5">1arp</h4>
+          <p class="profileText muted-text" id="profileUsername">Username</p>
         </div>
       </div>
       <div class="col-8"></div>
@@ -63,10 +63,18 @@
 
     </div>
 
-    <!-- Profile-->
+    <!-- Profile end-->
 
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+
+
+
+    <!-- Filters -->
+
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="dropdown d-inline-block col-3">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Languages
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2" id="langFltr" >
@@ -77,18 +85,14 @@
       </div>
 
 
-      <div class="slidecontainer">
+      <div class="slidecontainer d-inline-block col-3">
            <input type="range" min="0" max="100" value="0" class="slider" id="forkFltr">
+           <h4 id="rangeOut" class="d-inline-block">0</h4>
         </div>
+    <div class="col-3"></div>
+    </div>  
 
-
-
-
-
-
-
-
-    <button id="filterBtn">Filter</button>
+    <!-- Filters End -->
 
     <div class="temp"></div>
     <div class="temp"></div>
