@@ -1,4 +1,4 @@
-var mainList = document.getElementById('mainList')
+var repoDisplay = document.getElementById('repoDisplay')
 
 var avatarImg = document.getElementById('avatarImg')
 var profileName = document.getElementById('profileName')
@@ -87,13 +87,51 @@ function fltrAll(lang){
 
 function render(repos){
 
+    // var item = createCard('twitter_particle','26-7-6','JavaScript');
+    // repoDisplay.appendChild(item)
+    repoDisplay.innerHTML =''
+
     repos.forEach(element => {
+        var item = createCard(element.name,element.updated_at,element.language);
+        item.onclick = ()=>{
+            location.href=element.html_url;
+        }
+        repoDisplay.appendChild(item)
         console.log(`${element.id} language : ${element.language}`)
     });
 
 }
 
+function createCard(reponame,repolastupdate,repolanguage){
+    var listItem = document.createElement('li');
+    listItem.classList.add('row');
+    
+    var repoCard = document.createElement('div');
+    repoCard.classList.add('repoCard');
+    repoCard.classList.add('col-7');
+    
+    var repoName = document.createElement('h3');
+    repoName.classList.add('repoName');
+    repoName.innerText = reponame;
+    
+    var repoLastUpdate = document.createElement('p');
+    repoLastUpdate.classList.add('repoLastUpdate');
+    repoLastUpdate.innerText = `Updated At: ${repolastupdate}`;
 
+    var repoLanguage = document.createElement('p');
+    repoLanguage.classList.add('repoLanguage');
+    repoLanguage.innerText = repolanguage;
+
+    repoCard.appendChild(repoName);
+    repoCard.appendChild(repoLastUpdate);
+    repoCard.appendChild(repoLanguage);
+
+    listItem.appendChild(repoCard);
+
+    return listItem;
+
+
+}
 
 
 // INITIALIZATION
