@@ -1,4 +1,5 @@
 var repoDisplay = document.getElementById('repoDisplay')
+var dropdownMenu = document.getElementById('dropdownMenu')
 
 var avatarImg = document.getElementById('avatarImg')
 var profileName = document.getElementById('profileName')
@@ -66,11 +67,13 @@ var currLang = 'All';
 function fltrAll(lang){
     if(lang)
         currLang = lang
-    
+
         var filterList = undefined;
     if(currLang!='All'){
-        fltrList =  repos.filter((element) => element.language == currLang )
+        fltrList =  repos.filter((element) => element.language == currLang );
+        dropdownMenu.innerText = currLang;
     }else{
+        dropdownMenu.innerText = 'All';
         fltrList = repos;
     }
 
