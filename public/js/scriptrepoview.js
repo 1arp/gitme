@@ -98,7 +98,7 @@ function render(repos){
 
 // INITIALIZATION
 var repos = undefined;
-var languages = [];
+var languages = ['All'];
 var forkcount = [];
 var maxforkcount = undefined;
 var profile = undefined;

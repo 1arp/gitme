@@ -17,7 +17,7 @@
 
 
     <!-- js -->
-    <script defer src="../js/scriptrepoview.js"></script>
+    <!-- <script defer src="../js/scriptrepoview.js"></script> -->
     
     
     <title>repoview</title>
@@ -78,14 +78,15 @@
           Languages
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2" id="langFltr" >
-          <button class="dropdown-item" type="button">Action</button>
+          <!-- <button class="dropdown-item" type="button">Action</button>
           <button class="dropdown-item" type="button">Another action</button>
-          <button class="dropdown-item" type="button">Something else here</button>
+          <button class="dropdown-item" type="button">Something else here</button> -->
         </div>
       </div>
 
 
       <div class="slidecontainer d-inline-block col-3">
+          <h4 id="rangeOut" class="d-inline-block">Fork Count</h4>
            <input type="range" min="0" max="100" value="0" class="slider" id="forkFltr">
            <h4 id="rangeOut" class="d-inline-block">0</h4>
         </div>
@@ -94,6 +95,7 @@
 
     <!-- Filters End -->
 
+    <!-- <div class="temp"></div>
     <div class="temp"></div>
     <div class="temp"></div>
     <div class="temp"></div>
@@ -106,14 +108,20 @@
     <div class="temp"></div>
     <div class="temp"></div>
     <div class="temp"></div>
-    <div class="temp"></div>
-    <div class="temp"></div>
+    <div class="temp"></div> -->
       
-
-    
-    <ul id="repoList">
-
+    <ul id="repoDisplay">
+      <li class="row">
+          <div class="repoCard col-7">
+            <h3>Repo Name</h3>
+            <p class="repoLastUpdate">Updated At:</p>
+            <p class="languages">Java</p>
+          </div>
+      </li>
     </ul>
+    
+    
+
 
 
     
