@@ -23,6 +23,11 @@ route.get("/:id/repos", async (req, res) => {
     res.send(repos);
 });
 
+route.get("/:id/profile", async(req,res) => {
+    var profile = await getProfile(req.params.id);
+    res.send(profile);
+})
+
 
 
 

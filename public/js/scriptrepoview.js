@@ -11,19 +11,21 @@ var rangeOut = document.getElementById('rangeOut')
 var langFltr = document.getElementById('langFltr')
 var forkFltr = document.getElementById('forkFltr')
 
+var username = localStorage.getItem("username")
+
 
 
 
 //  Fecthing Repos
 async function getRepos(){
-    const response = await fetch('/pages/getrepos');
+    const response = await fetch(`/api/${username}/repos`);
     const repos = await response.json();
     return repos;
 }
 
 // Fetching Profile Picture
 async function getProfile(){
-    const profileResponse = await fetch('/pages/getprofile');
+    const profileResponse = await fetch(`/api/${username}/profile`);
     const profile = await profileResponse.json();
 
     return profile;
@@ -188,6 +190,4 @@ forkFltr.oninput = function(){
 }
 
 
-
-
-console.log(getRepos())
+// console.log(getRepos())
