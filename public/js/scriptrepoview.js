@@ -11,8 +11,15 @@ var rangeOut = document.getElementById('rangeOut')
 var langFltr = document.getElementById('langFltr')
 var forkFltr = document.getElementById('forkFltr')
 
+var usernameText = document.getElementById('username')
+var searchBtn = document.getElementById('searchBtn')
+
 var username = localStorage.getItem("username")
 
+
+searchBtn.onclick = function() {
+    localStorage.setItem("username", usernameText.value)
+}
 
 
 
@@ -50,7 +57,7 @@ function loadDropdown(dropdown, list , clickfn){
 }
 
 
-// FIlter Functions
+// Filter Functions
 function fltrLang(lang){
 
     var fltrList = repos.filter((element) => element.language == lang ) 
